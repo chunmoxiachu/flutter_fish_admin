@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/flutter_fish_admin/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="鱼来哒运营后台，用于钓点、渔获与提现审核管理。">
+  <meta name="theme-color" content="#132F2B">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="鱼来哒运营后台">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>鱼来哒 · 运营后台</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script src="flutter_bootstrap.js"></script>
+</head>
+<body>
+  <div id="admin-boot" aria-live="polite">
+    <div class="admin-boot-card">
+      <span class="admin-boot-mark">鱼</span>
+      <strong>鱼来哒运营后台</strong>
+      <span>正在载入工作台…</span>
+    </div>
+  </div>
+  <style>
+    #admin-boot {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: grid;
+      place-items: center;
+      background: #132f2b;
+      color: #fffdf6;
+      font-family: "Noto Sans SC", "PingFang SC", sans-serif;
+    }
+    .admin-boot-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      letter-spacing: .04em;
+    }
+    .admin-boot-mark {
+      display: grid;
+      width: 52px;
+      height: 52px;
+      place-items: center;
+      margin-bottom: 4px;
+      border-radius: 15px;
+      background: #d7f84a;
+      color: #132f2b;
+      font-size: 22px;
+      font-weight: 800;
+    }
+    .admin-boot-card strong {
+      font-size: 18px;
+    }
+    .admin-boot-card span:last-child {
+      color: #adc0ba;
+      font-size: 11px;
+    }
+  </style>
+  <script>
+    window.addEventListener('flutter-first-frame', function() {
+      document.getElementById('admin-boot')?.remove();
+    });
+  </script>
+</body>
+</html>
